@@ -1,0 +1,25 @@
+@if(users.length == 0){
+<div class="alert alert-warning">No hay registros en el sistema!</div>
+}@else{
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>lastname</th>
+            <th>email</th>
+            <th>username</th>
+        </tr>
+    <tbody>
+        @for(user of users; track $index){
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.userName}}</td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
