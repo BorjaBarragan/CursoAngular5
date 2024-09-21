@@ -11,30 +11,30 @@ export class UserService {
 
   private users: User []= [{
     id:1,
-    name: 'Pepe',
-    lastName: 'Giraldo',
-    email: 'pepito@gmail.com',
-    userName: 'pepebronx',
-    password:'pepito1234'
+    name: 'Francisco',
+    lastName: 'Etxeberria',
+    email: 'fran@gmail.com',
+    userName: 'franbronx',
+    password:'fran1234'
   },{
     id:2,
     name: 'Laura',
-    lastName: 'Bernia',
+    lastName: 'Cortes',
     email: 'lau@gmail.com',
     userName: 'laurabronx',
     password:'lau1234'
   },{
     id:3,
-    name: 'Antonia',
-    lastName: 'Morena',
-    email: 'anto@gmail.com',
-    userName: 'antobronx',
-    password:'anto1234'
+    name: 'Paca',
+    lastName: 'Heredia',
+    email: 'paqui@gmail.com',
+    userName: 'paquibronx',
+    password:'paqui1234'
   }]; 
 
   constructor() {  }
 
-  //metodo para obtener todos los usuarios
+  //Los Observavbles o se activan por si mismo hasta que te subscribes a ellos.
   findAll():Observable <User[]>{
   return of(this.users);
   }
