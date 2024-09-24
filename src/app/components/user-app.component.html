@@ -1,11 +1,16 @@
 <div class="container my-4">
     <h3>{{title}}</h3>
+    <button class="btn btn-dark btn-sm" (click)="setOpen()">{{open == true? 'Cerrar' : 'Crear Usuario'}}</button>
     <div class="row">
+        
         <div class="col">
-            <user-form (newUserEventEmitter)="addUser($event)"/>
-        </div>
-        <div class="col">
-            <user [users]="users" />
+            <user [users]="users" (idUserEventEmitter)="removeUser($event)"
+                (selectedUserEventEmitter)="setSelectedUser($event)" />
         </div>
     </div>
 </div>
+@if(open){
+<div class="abrir-modal">
+    <user-form [user]="userSelected" (newUserEventEmitter)="addUser($event)" (openEventEmitter)="setOpen()" />
+</div>
+}
